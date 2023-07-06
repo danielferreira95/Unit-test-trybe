@@ -12,22 +12,35 @@
 */
 
 const arr = [1, 2, 3, 4, 5];
+
 const verificaValor = (arrai) => {
- let valor;
+ let valor = 0;
   for (let index = 0; index < arrai.length; index += 1) {
     if (typeof arrai[index] !== 'number') {
-      valor = 1;
-    } else { valor = 0; }
-   } return valor;
+      valor += 1;
+    } else { valor += 0; }
+   } return valor; 
+};
+
+const looping = (ar) => {
+  let media = 0;
+for (let index = 0; index < ar.length; index += 1) {
+  media += ar[index];
+ } return media;
 };
 
 const average = (arra) => {
-   let media = 0;
-  if (!Array.isArray(arra) || arra.length === 0 || verificaValor(arra) === 1) {
-    return undefined;
-   } for (let index = 0; index < arra.length; index += 1) {
-           media += arra[index];
-          } return Math.round(media / arra.length);
-   };
+   const retorno = verificaValor(arra);
+   let i = '';
+  if (arra.length === 0 || retorno !== 0) {
+      i = undefined;
+   } else {
+    i = Math.round(looping(arra) / arra.length);
+} return i;
+};
+const tentei = [1, 2, 3, '4', 5];
 
+console.log(average(arr));
+console.log(average(tentei));
+console.log(typeof tentei[1]);
   module.exports = average;

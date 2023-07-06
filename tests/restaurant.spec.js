@@ -11,6 +11,7 @@ describe('10 - Implemente a função `createMenu`, bem como seus casos de teste'
     expect(Object.keys(createMenu({ food: {}, drinks: {} }).fetchMenu())).toEqual(['food', 'drinks']);
 
     //Escreva um teste que verifica se o menu passado pra função createMenu()é idêntico ao menu recuperado pela função createMenu({ food: {}, drinks: {} }).fetchMenu().
+
     
   });
 });

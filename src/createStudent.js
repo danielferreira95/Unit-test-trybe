@@ -14,13 +14,13 @@
     estudante.name // Retorna: 'Leandrão, o Lobo Solitário'
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
+function feedbacki() { return 'Eita pessoa boa!'; }
 
 const createStudent = (stri) => {
-  const feedbacki = () => 'Eita pessoa boa!';
   const obje = {
     name: `${stri}`,
-    feedback: `${feedbacki()}`,
+    feedback: feedbacki(),
   }; return obje;
 };
-
+console.log(createStudent('Leandro'));
 module.exports = createStudent;

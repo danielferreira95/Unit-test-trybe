@@ -36,15 +36,13 @@
 
 const calculator = (number1, number2) => {
   const objet = {
-    sum: `${number1 + number2}`,
-    mult: `${number1 * number2}`,
-    div: `${Math.floor(number1 / number2)}`,
-    sub: `${number1 - number2}`,
+    sum: number1 + number2,
+    mult: number1 * number2,
+    div: Math.floor(number1 / number2),
+    sub: number1 - number2,
   };
   return objet;
 };
-
-// console.log(Object.entries(calculator(1, 2)));
 
 const arrayGenerator = (type, object) => {
   if (type === 'keys') {
@@ -55,6 +53,8 @@ const arrayGenerator = (type, object) => {
     return Object.entries(object);
   } return undefined;
 };
+console.log(arrayGenerator('keys', (calculator(1, 2))));
 console.log(arrayGenerator('values', (calculator(1, 2))));
+console.log(arrayGenerator('entries', (calculator(1, 2))));
 
 module.exports = { calculator, arrayGenerator };

@@ -19,8 +19,8 @@ function feedbacki() { return 'Eita pessoa boa!'; }
 const createStudent = (stri) => {
   const obje = {
     name: `${stri}`,
-    feedback: feedbacki(),
+    feedback: () => 'Eita pessoa boa!',
   }; return obje;
 };
-console.log(createStudent('Leandro'));
+console.log(typeof createStudent('Leandro').feedback);
 module.exports = createStudent;
